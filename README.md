@@ -1,5 +1,9 @@
 # docker-cloudflare-argo
 
+![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/jakejarvis/cloudflare-argo.svg?style=flat-square)
+![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/jakejarvis/cloudflare-argo.svg?style=flat-square)
+![Docker Pulls](https://img.shields.io/docker/pulls/jakejarvis/cloudflare-argo.svg?style=flat-square)
+
 A Docker image designed to be an intermediary between your local containers (or anything on your local network) and [Cloudflare's Argo tunneling service](https://www.cloudflare.com/products/argo-tunnel/). 
 
 (AKA: A fantastic way to avoid exposing your containers **and** your host to the scary, scary world.)
@@ -25,7 +29,7 @@ The following environment variables are required:
 docker run -d \
            -e "TUNNEL_HOSTNAME=mytunnel.jarv.is" \
            -e "TUNNEL_URL=http://localhost:8080" \
-           -v "/absolute/path/on/your/host/cert.pem:/etc/cloudflared/cert.pem" \
+           -v "/Users/jake/config/cert.pem:/etc/cloudflared/cert.pem" \
            jakejarvis/cloudflare-argo:latest
 ```
 

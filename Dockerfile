@@ -6,8 +6,8 @@ RUN apt-get update \
  && rm -rf /var/lib/apt/lists/*
 
 RUN wget -O cloudflared.tgz https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-amd64.tgz \
- && tar -zxvf cloudflared.tgz -C ./ \
+ && tar -xzvf cloudflared.tgz \
  && rm cloudflared.tgz \
  && chmod +x cloudflared
 
-ENTRYPOINT ["./cloudflared","tunnel"]
+ENTRYPOINT ["./cloudflared", "tunnel"]
