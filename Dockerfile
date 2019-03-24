@@ -10,4 +10,4 @@ RUN wget -O cloudflared.tgz https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stab
  && rm cloudflared.tgz \
  && chmod +x cloudflared
 
-ENTRYPOINT ["sh", "-c", "./cloudflared tunnel --loglevel info --no-autoupdate"]
+ENTRYPOINT ["./cloudflared","tunnel"]
