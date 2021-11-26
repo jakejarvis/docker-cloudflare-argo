@@ -31,3 +31,13 @@ docker run -d \
            -v "/Users/jake/config/cert.pem:/etc/cloudflared/cert.pem" \
            jakejarvis/cloudflare-argo:latest
 ```
+
+If building locally, a [`cloudflared` version](https://github.com/cloudflare/cloudflared/releases) can be specified as a build-time argument (e.g. `2021.10.11`; defaults to `latest`):
+
+```bash
+docker build --build-arg CLOUDFLARED_VERSION=2021.10.5 .
+```
+
+## License
+
+MIT
